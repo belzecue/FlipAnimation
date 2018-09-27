@@ -298,7 +298,7 @@ class FlipAnimation (bpy.types.Operator) :
             bpy.ops.pose.copy()
             if self.append_mode:
                 context.scene.frame_set(frame + self.append_frames_offset)
-            bpy.ops.pose.select_mirror(extend=True)
+            bpy.ops.pose.select_mirror()
             print(bpy.ops.pose.paste(flipped=True,selected_mask=True))
             bpy.ops.anim.keyframe_insert(type='Available',confirm_success=self.debug_output)
             if frame == 5:
